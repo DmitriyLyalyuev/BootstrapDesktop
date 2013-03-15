@@ -8,7 +8,7 @@ sudo sh -c 'echo "deb http://apt.insynchq.com/ubuntu $(lsb_release -sc) non-free
 
 sudo apt-get update
 sudo apt-get install -y mc git git-core xbindkeys xsel gitg diffuse hamster-indicator hamster-applet hotot curl \
-  xclip scrot mpd mpc sonata rsnapshot nautilus-dropbox lxc \
+  xclip scrot mpd mpc sonata rsnapshot nautilus-dropbox lxc grc htop \
   chromium-browser sublime-text-dev oracle-java7-installer insync-beta-ubuntu
 
 if [ "`dpkg -l skype | grep ii | cut '-d ' -f1`" != "ii" ]; then
