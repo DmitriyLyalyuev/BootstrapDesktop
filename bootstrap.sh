@@ -10,3 +10,8 @@ sudo apt-get update
 sudo apt-get install -y mc git git-core xbindkeys xsel gitg diffuse hamster-indicator hamster-applet hotot curl \
   xclip scrot mpd mpc sonata rsnapshot nautilus-dropbox lxc \
   chromium-browser sublime-text-dev oracle-java7-installer insync-beta-ubuntu
+
+if [ "`dpkg -l skype | grep ii | cut '-d ' -f1`" != "ii" ]; then
+    wget -O skype.deb http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+    dpkg -i skype.deb
+fi
