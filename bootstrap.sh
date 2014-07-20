@@ -6,12 +6,8 @@ sudo add-apt-repository -y ppa:git-core/ppa
 
 sudo apt-get update
 sudo apt-get install -y mc git git-core xbindkeys xsel gitg diffuse hamster-indicator hamster-applet hotot curl \
-  xclip scrot mpd mpc sonata rsnapshot lxc grc htop \
+  xclip scrot grc htop \
   sublime-text oracle-java7-installer encfs jxplorer openssh-server \
   nautilus-dropbox keepassx libasound2-plugins:i386 sni-qt:i386
 
-if [ "`dpkg -l skype | grep ii | cut '-d ' -f1`" != "ii" ]; then
-    wget -O skype.deb http://www.skype.com/go/getskype-linux-beta-ubuntu-64
-    sudo dpkg -i ./skype.deb
-    rm -f ./skype.deb
-fi
+sudo add-apt-repository ppa:gencfsm && sudo apt-get update && sudo apt-get -y install gnome-encfs-manager
