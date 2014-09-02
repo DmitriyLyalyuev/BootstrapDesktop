@@ -34,6 +34,7 @@ rm -f ~/.gitconfig
 rm -f ~/.proxy_pac
 rm -f ~/.vimrc
 rm -f ~/.xbindkeysrc
+sudo rm -f /etc/grc.conf
 ln -s ~/Projects/Public/DotFiles/.bash_aliases ~/.bash_aliases
 ln -s ~/Projects/Public/DotFiles/.bashrc ~/.bashrc
 ln -s ~/Projects/Public/DotFiles/.gemrc ~/.gemrc
@@ -42,6 +43,7 @@ ln -s ~/Projects/Public/DotFiles/.proxy_pac ~/.proxy_pac
 ln -s ~/Projects/Public/DotFiles/.vimrc ~/.vimrc
 ln -s ~/Projects/Public/DotFiles/.xbindkeysrc ~/.xbindkeysrc
 ln -s ~/Projects/Public/DotFiles/.grc ~/.grc
+sudo ln -s ~/Projects/Public/DotFiles/etc/grc.conf /etc/grc.conf
 
 touch ~/.desktopinstalled
 fi
