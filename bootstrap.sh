@@ -20,6 +20,10 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
 
+# sieveshell dependencies
+sudo pip install ez_setup
+sudo pip install managesieve
+
 if [ ! -f ~/.desktopinstalled ]; then
 
 # Install rbenv in $HOME/.rbenv
