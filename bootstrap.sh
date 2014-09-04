@@ -14,7 +14,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   xclip scrot grc htop sublime-text oracle-java7-installer encfs jxplorer openssh-server \
   nautilus-dropbox keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
-  screen reptyr gnome-encfs-manager virtualbox owncloud-client wine
+  screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
   python-pip
 
 # Ansible dependencies
