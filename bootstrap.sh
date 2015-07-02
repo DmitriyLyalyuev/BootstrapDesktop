@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core xbindkeys xsel gitg diffuse hamster-indicator hamster-applet hotot curl \
-  xclip scrot grc htop sublime-text oracle-java7-installer encfs jxplorer openssh-server \
+  xclip scrot grc htop sublime-text oracle-java7-installer encfs openssh-server \
   nautilus-dropbox keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
@@ -20,15 +20,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
 
-# sieveshell dependencies
-sudo pip install ez_setup
-sudo pip install managesieve
-
 if [ ! -f ~/.desktopinstalled ]; then
-
-# Install rbenv in $HOME/.rbenv
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # Install ansible
 git clone https://github.com/ansible/ansible.git ~/.ansible
