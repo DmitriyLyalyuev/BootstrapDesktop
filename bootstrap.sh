@@ -24,6 +24,10 @@ if [ ! -f ~/.desktopinstalled ]; then
   # Install ansible
   git clone https://github.com/ansible/ansible.git ~/.ansible
 
+  # Install rbenv in $HOME/.rbenv
+  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
   mkdir -p ~/Projects/Public
   mkdir -p ~/Projects/Private
   mkdir -p ~/Projects/Clients
