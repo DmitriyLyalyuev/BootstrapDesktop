@@ -47,3 +47,5 @@ sudo ln -s ~/Projects/Public/DotFiles/etc/grc.conf /etc/grc.conf
 
 touch ~/.desktopinstalled
 fi
+
+apt-get dist-upgrade
