@@ -5,6 +5,7 @@ sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
+sudo apt-add-repository ppa:rael-gc/scudcloud
 
 # Install all software
 sudo apt-get update
@@ -15,7 +16,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   nautilus-dropbox keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine
+  python-pip sshpass clementine scudcloud
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
