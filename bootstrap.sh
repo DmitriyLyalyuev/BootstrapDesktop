@@ -13,7 +13,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core xbindkeys xsel gitg diffuse hamster-indicator hamster-applet hotot curl \
   xclip scrot grc htop sublime-text oracle-java7-installer encfs openssh-server \
-  nautilus-dropbox keepassx libasound2-plugins:i386 sni-qt:i386 \
+  keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
   python-pip sshpass clementine scudcloud
