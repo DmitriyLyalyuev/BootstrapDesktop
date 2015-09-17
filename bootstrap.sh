@@ -16,7 +16,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine scudcloud
+  python-pip sshpass clementine scudcloud libyaml-dev
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
@@ -56,4 +56,4 @@ if [ ! -f ~/.desktopinstalled ]; then
   touch ~/.desktopinstalled
 fi
 
-apt-get dist-upgrade
+sudo apt-get dist-upgrade
