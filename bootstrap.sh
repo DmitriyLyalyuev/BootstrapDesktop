@@ -6,6 +6,7 @@ sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
 sudo apt-add-repository ppa:rael-gc/scudcloud
+sudo add-apt-repository ppa:costales/unity-webapps-telegram
 
 # Install all software
 sudo apt-get update
@@ -16,7 +17,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine scudcloud libyaml-dev
+  python-pip sshpass clementine scudcloud libyaml-dev unity-webapps-telegram 
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
