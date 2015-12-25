@@ -5,8 +5,12 @@ sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
-sudo apt-add-repository ppa:rael-gc/scudcloud
-sudo add-apt-repository ppa:costales/unity-webapps-telegram
+sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/owncloud-client.list"
+
+cd /tmp
+wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key
+sudo apt-key add - < Release.key
 
 # Install all software
 sudo apt-get update
@@ -17,7 +21,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine scudcloud libyaml-dev unity-webapps-telegram 
+  python-pip sshpass clementine libyaml-dev darktable
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
@@ -58,3 +62,7 @@ if [ ! -f ~/.desktopinstalled ]; then
 fi
 
 sudo apt-get dist-upgrade
+
+echo "Software for manual installation:"
+echo "Slack: https://slack.com/apps"
+echo "Skype: http://www.skype.com/uk/download-skype/skype-for-computer/"
