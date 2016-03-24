@@ -6,10 +6,10 @@ sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
 sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_14.04/ /' >> /etc/apt/sources.list.d/owncloud-client.list"
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.04/ /' >> /etc/apt/sources.list.d/owncloud-client.list"
 
 cd /tmp
-wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key
+wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_12.04/Release.key
 sudo apt-key add - < Release.key
 
 # Install all software
@@ -21,7 +21,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine libyaml-dev darktable
+  python-pip sshpass clementine libyaml-dev darktable python-dev
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
