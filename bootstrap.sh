@@ -21,7 +21,8 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine libyaml-dev darktable python-dev
+  python-pip sshpass clementine libyaml-dev darktable python-dev apg \
+  virtaulenv virtaulenvwrapper
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
