@@ -22,7 +22,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
   python-pip sshpass clementine libyaml-dev darktable python-dev apg \
-  virtaulenv virtaulenvwrapper
+  virtaulenv virtaulenvwrapper terminator
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
