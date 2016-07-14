@@ -34,7 +34,6 @@ if [ ! -f ~/.desktopinstalled ]; then
   # Install rbenv in $HOME/.rbenv
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  git clone https://github.com/nojhan/liquidprompt.git ~/.liquidprompt
 
   mkdir -p ~/Projects/Public
   mkdir -p ~/Projects/Private
