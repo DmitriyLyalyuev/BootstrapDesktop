@@ -22,7 +22,7 @@ sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev 
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
   python-pip sshpass clementine libyaml-dev darktable python-dev apg \
-  virtaulenv virtaulenvwrapper terminator
+  virtaulenv virtaulenvwrapper terminator acpi
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
@@ -34,6 +34,7 @@ if [ ! -f ~/.desktopinstalled ]; then
   # Install rbenv in $HOME/.rbenv
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  git clone https://github.com/nojhan/liquidprompt.git ~/.liquidprompt
 
   mkdir -p ~/Projects/Public
   mkdir -p ~/Projects/Private
@@ -56,6 +57,7 @@ if [ ! -f ~/.desktopinstalled ]; then
   ln -s ~/Projects/Public/DotFiles/.proxy_pac ~/.proxy_pac
   ln -s ~/Projects/Public/DotFiles/.vimrc ~/.vimrc
   ln -s ~/Projects/Public/DotFiles/.xbindkeysrc ~/.xbindkeysrc
+  ln -s ~/Projects/Public/DotFiles/.liquidpromptrc ~/.config/liquidpromptrc
   ln -s ~/Projects/Public/DotFiles/.grc ~/.grc
   sudo ln -s ~/Projects/Public/DotFiles/etc/grc.conf /etc/grc.conf
 
