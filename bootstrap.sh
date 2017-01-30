@@ -59,6 +59,7 @@ if [ ! -f ~/.desktopinstalled ]; then
   ln -s ~/Projects/Public/DotFiles/.xbindkeysrc ~/.xbindkeysrc
   ln -s ~/Projects/Public/DotFiles/.liquidpromptrc ~/.config/liquidpromptrc
   ln -s ~/Projects/Public/DotFiles/.grc ~/.grc
+  ln -s ~/Projects/Public/DotFiles/.xprofile ~/.xprofile
   sudo ln -s ~/Projects/Public/DotFiles/etc/grc.conf /etc/grc.conf
 
   touch ~/.desktopinstalled
