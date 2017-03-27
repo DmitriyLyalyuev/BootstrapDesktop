@@ -5,9 +5,6 @@ sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
-sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_14.04/ /' >> /etc/apt/sources.list.d/owncloud-client.list"
-
 
 cd /tmp
 wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_12.04/Release.key
@@ -18,11 +15,11 @@ sudo apt-get update
 sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core xbindkeys xsel diffuse hamster-indicator hamster-applet hotot curl \
-  xclip scrot grc htop sublime-text oracle-java7-installer encfs openssh-server \
+  xclip scrot grc htop sublime-text oracle-java8-installer encfs openssh-server \
   keepassx libasound2-plugins:i386 sni-qt:i386 \
   pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
-  screen reptyr gnome-encfs-manager virtualbox owncloud-client wine \
-  python-pip sshpass clementine libyaml-dev darktable python-dev apg \
+  screen reptyr gnome-encfs-manager virtualbox wine \
+  python-pip sshpass clementine libyaml-dev python-dev apg \
   virtualenv virtualenvwrapper terminator acpi
 
 # Ansible dependencies
