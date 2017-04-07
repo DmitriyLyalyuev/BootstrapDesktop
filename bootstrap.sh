@@ -6,21 +6,22 @@ sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
 
-cd /tmp
-wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_12.04/Release.key
-sudo apt-key add - < Release.key
-
 # Install all software
-sudo apt-get update
-sudo apt-get install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
+sudo apt update
+sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core xbindkeys xsel diffuse hamster-indicator hamster-applet hotot curl \
   xclip scrot grc htop sublime-text oracle-java8-installer encfs openssh-server \
-  keepassx libasound2-plugins:i386 sni-qt:i386 \
-  pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
-  screen reptyr gnome-encfs-manager virtualbox wine \
-  python-pip sshpass clementine libyaml-dev python-dev apg \
+  keepassx pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
+  screen gnome-encfs-manager virtualbox python-pip sshpass clementine libyaml-dev python-dev apg \
   virtualenv virtualenvwrapper terminator acpi
+
+# Install docker
+curl -sSL https://get.docker.com/ | sh
+
+cd /tmp
+wget https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb
+dpkg -i *.deb
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2
