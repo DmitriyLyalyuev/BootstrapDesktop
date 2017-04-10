@@ -14,7 +14,7 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
   xclip scrot grc htop sublime-text oracle-java8-installer encfs openssh-server \
   keepassx pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen gnome-encfs-manager virtualbox python-pip sshpass clementine libyaml-dev python-dev apg \
-  virtualenv virtualenvwrapper terminator acpi
+  virtualenv virtualenvwrapper terminator acpi scrot mypaint zenity texlive-full
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
@@ -24,7 +24,7 @@ wget https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd6
 dpkg -i *.deb
 
 # Ansible dependencies
-sudo pip install paramiko PyYAML jinja2 httplib2
+sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython
 
 if [ ! -f ~/.desktopinstalled ]; then
   # Install ansible
