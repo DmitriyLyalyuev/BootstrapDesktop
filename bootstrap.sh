@@ -14,7 +14,8 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
   xclip scrot grc htop sublime-text oracle-java8-installer encfs openssh-server \
   keepassx pidgin-libnotify pidgin-plugin-pack pidgin-extprefs pidgin-otr \
   screen gnome-encfs-manager virtualbox python-pip sshpass clementine libyaml-dev python-dev apg \
-  virtualenv virtualenvwrapper terminator acpi scrot mypaint zenity texlive-full
+  virtualenv virtualenvwrapper terminator acpi scrot mypaint zenity texlive-full \
+  libyajl-dev
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
