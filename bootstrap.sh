@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Add needed repositories
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
@@ -10,7 +11,7 @@ sudo add-apt-repository -y ppa:gencfsm
 sudo apt update
 sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
-  mc git git-core xbindkeys xsel diffuse curl xclip grc htop sublime-text-installer oracle-java8-installer \
+  mc git git-core xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
   virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev
 
@@ -41,7 +42,7 @@ mkdir -p ~/Projects/Public
 mkdir -p ~/Projects/Private
 mkdir -p ~/Projects/Clients
 
-[ ! -f ~/Projects/Public/DotFiles ]; then
+if [ ! -f ~/Projects/Public/DotFiles ]; then
   # Clone and install DotFiles
   git clone git@github.com:DmitriyLyalyuev/DotFiles.git ~/Projects/Public/DotFiles
   rm -f ~/.bash_aliases
