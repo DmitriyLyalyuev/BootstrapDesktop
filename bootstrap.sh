@@ -54,6 +54,7 @@ if [ ! -f ~/Projects/Public/DotFiles ]; then
   rm -f ~/.xbindkeysrc
   sudo rm -f /etc/grc.conf
   ln -s ~/Projects/Public/DotFiles/.bash_aliases ~/.bash_aliases
+  ln -s ~/Projects/Public/DotFiles/.bash_completion ~/.bash_completion
   ln -s ~/Projects/Public/DotFiles/.bashrc ~/.bashrc
   ln -s ~/Projects/Public/DotFiles/.gemrc ~/.gemrc
   ln -s ~/Projects/Public/DotFiles/.gitconfig ~/.gitconfig
