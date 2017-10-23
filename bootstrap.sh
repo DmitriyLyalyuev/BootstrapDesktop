@@ -13,7 +13,7 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev pyth
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core tig xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
-  virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev
+  virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev libinput-tools xdotool
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
@@ -61,9 +61,17 @@ if [ ! -f ~/Projects/Public/DotFiles ]; then
   ln -s ~/Projects/Public/DotFiles/.proxy_pac ~/.proxy_pac
   ln -s ~/Projects/Public/DotFiles/.vimrc ~/.vimrc
   ln -s ~/Projects/Public/DotFiles/.xbindkeysrc ~/.xbindkeysrc
-  ln -s ~/Projects/Public/DotFiles/.liquidpromptrc ~/.config/liquidpromptrc
   ln -s ~/Projects/Public/DotFiles/.grc ~/.grc
+  ln -s ~/Projects/Public/DotFiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
   sudo ln -s ~/Projects/Public/DotFiles/etc/grc.conf /etc/grc.conf
+
+  cd /tmp
+  git clone http://github.com/bulletmark/libinput-gestures
+  cd libinput-gestures
+  sudo make install
+  sudo gpasswd -a $USER input
+  sudo ./libinput-gestures-setup install
+  libinput-gestures-setup start
 fi
 
 sudo apt-get dist-upgrade
