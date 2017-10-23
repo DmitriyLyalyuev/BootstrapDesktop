@@ -9,7 +9,7 @@ sudo add-apt-repository -y ppa:gencfsm
 
 # Install all software
 sudo apt update
-sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev \
+sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev python-minimal \
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core tig xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
