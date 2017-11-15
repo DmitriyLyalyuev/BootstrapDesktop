@@ -25,7 +25,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i *.deb
 
 # Ansible dependencies
-sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython google.cloud python-zenity
+sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython google.cloud python-zenity awscli
 
 if [ ! -f ~/.ansible ]; then
   # Install ansible
