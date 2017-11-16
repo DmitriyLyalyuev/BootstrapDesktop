@@ -22,7 +22,8 @@ cd /tmp
 wget https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb
 wget http://dl.joxi.ru/linux/joxi-amd64.deb
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dpkg -i *.deb
+sudo dpkg -i *.deb
+sudo apt install -f
 
 # Ansible dependencies
 sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython google.cloud python-zenity awscli
@@ -77,7 +78,7 @@ fi
 sudo apt-get dist-upgrade
 
 # Disable hog process tracker-miner-fs
-echo -e "\nHidden=true\n" | sudo tee --append /etc/xdg/autostart/tracker-extract.desktop /etc/xdg/autostart/tracker-miner-apps.desktop /etc/xdg/autostart/tracker-miner-fs.desktop /etc/xdg/autostart/tracker-miner-user-guides.desktop /etc/xdg/autostart/tracker-store.desktop > /dev/null
-gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
-gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
-tracker reset --hard
+#echo -e "\nHidden=true\n" | sudo tee --append /etc/xdg/autostart/tracker-extract.desktop /etc/xdg/autostart/tracker-miner-apps.desktop /etc/xdg/autostart/tracker-miner-fs.desktop /etc/xdg/autostart/tracker-miner-user-guides.desktop /etc/xdg/autostart/tracker-store.desktop > /dev/null
+#gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
+#gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+#tracker reset --hard
