@@ -13,7 +13,8 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev pyth
   libreadline-dev libreadline6-dev libssl-dev libxml2-dev libxslt1-dev zlib1g-dev libmagickwand-dev \
   mc git git-core tig xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
-  virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev libinput-tools xdotool
+  virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev libinput-tools xdotool \
+  cvs
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
@@ -26,7 +27,9 @@ sudo dpkg -i *.deb
 sudo apt install -f
 
 # Ansible dependencies
-sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython google.cloud python-zenity awscli
+sudo pip install --upgrade pip
+sudo easy_install -U setuptools
+sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython python-zenity awscli google.cloud
 
 if [ ! -f ~/.ansible ]; then
   # Install ansible
@@ -43,7 +46,7 @@ mkdir -p ~/Projects/Public
 mkdir -p ~/Projects/Private
 mkdir -p ~/Projects/Clients
 
-if [ ! -f ~/Projects/Public/DotFiles ]; then
+if [ ! -d ~/Projects/Public/DotFiles ]; then
   # Clone and install DotFiles
   git clone git@github.com:DmitriyLyalyuev/DotFiles.git ~/Projects/Public/DotFiles
   rm -f ~/.bash_aliases
@@ -76,6 +79,8 @@ if [ ! -f ~/Projects/Public/DotFiles ]; then
 fi
 
 sudo apt-get dist-upgrade
+
+echo "!!! You need to reboot ypur laptop !!!"
 
 # Disable hog process tracker-miner-fs
 #echo -e "\nHidden=true\n" | sudo tee --append /etc/xdg/autostart/tracker-extract.desktop /etc/xdg/autostart/tracker-miner-apps.desktop /etc/xdg/autostart/tracker-miner-fs.desktop /etc/xdg/autostart/tracker-miner-user-guides.desktop /etc/xdg/autostart/tracker-store.desktop > /dev/null
