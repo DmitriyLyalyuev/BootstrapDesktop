@@ -14,7 +14,7 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev pyth
   mc git git-core tig xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
   virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev libinput-tools xdotool \
-  cvs clipit
+  cvs clipit gitk
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
