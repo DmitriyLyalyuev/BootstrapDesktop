@@ -45,11 +45,26 @@ fi
 mkdir -p ~/Projects/Public
 mkdir -p ~/Projects/Private
 mkdir -p ~/Projects/Clients
+mkdir -p ~/.config/sublime-text-3/Packages
+
 
 if [ ! -d ~/Projects/Public/DotFiles ]; then
   # Clone and install DotFiles
   git clone git@github.com:DmitriyLyalyuev/DotFiles.git ~/Projects/Public/DotFiles
+  git clone https://github.com/wbond/package_control ~/.config/sublime-text-3/Packages/Package\ Control
   git clone git@github.com:DmitriyLyalyuev/SublimeText3Snippets.git ~/Projects/Public/SublimeText3Snippets
+  git clone https://github.com/kemayo/sublime-text-git ~/.config/sublime-text-3/Packages/Git
+  git clone https://github.com/JulianEberius/SublimePythonIDE.git ~/.config/sublime-text-3/Packages/PythonIDE
+  git clone https://github.com/alexlouden/Terraform.tmLanguage.git ~/.config/sublime-text-3/Packages/Terraform
+  git clone https://github.com/brandonwamboldt/sublime-nginx.git ~/.config/sublime-text-3/Packages/Nginx
+  git clone https://github.com/titoBouzout/SideBarEnhancements.git ~/.config/sublime-text-3/Packages/SideBarEnhancements
+  git clone https://github.com/SublimeLinter/SublimeLinter3.git ~/.config/sublime-text-3/Packages/SublimeLinter
+  git clone https://github.com/jisaacks/GitGutter.git ~/.config/sublime-text-3/Packages/GitGutter
+  git clone https://github.com/dzhibas/SublimePrettyJson.git ~/.config/sublime-text-3/Packages/PrettyJSON
+  git clone https://github.com/wilon/Theme-MonokaiPlus ~/.config/sublime-text-3/Packages/Theme-Monokai+
+
+  ln -s ~/Projects/Public/SublimeText3Snippets ~/.config/sublime-text-3/Packages/SublimeText3Snippets
+
   rm -f ~/.bash_aliases
   rm -f ~/.bashrc
   rm -f ~/.gemrc
@@ -69,9 +84,6 @@ if [ ! -d ~/Projects/Public/DotFiles ]; then
   ln -s ~/Projects/Public/DotFiles/.grc ~/.grc
   ln -s ~/Projects/Public/DotFiles/libinput-gestures.conf ~/.config/libinput-gestures.conf
   sudo ln -s ~/Projects/Public/DotFiles/etc/grc.conf /etc/grc.conf
-
-  mkdir -p ~/.config/sublime-text-3/Packages
-  ln -s ~/Projects/Public/SublimeText3Snippets ~/.config/sublime-text-3/Packages/SublimeText3Snippets
 
   cd /tmp
   git clone http://github.com/bulletmark/libinput-gestures
