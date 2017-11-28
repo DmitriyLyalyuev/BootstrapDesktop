@@ -45,7 +45,7 @@ fi
 mkdir -p ~/Projects/Public
 mkdir -p ~/Projects/Private
 mkdir -p ~/Projects/Clients
-mkdir -p ~/.config/sublime-text-3/Packages
+mkdir -p ~/.config/sublime-text-3/Packages/User
 
 
 if [ ! -d ~/Projects/Public/DotFiles ]; then
@@ -65,6 +65,10 @@ if [ ! -d ~/Projects/Public/DotFiles ]; then
   git clone https://github.com/revolunet/sublimetext-markdown-preview ~/.config/sublime-text-3/Packages/MarkDown\ Preview
 
   ln -s ~/Projects/Public/SublimeText3Snippets ~/.config/sublime-text-3/Packages/SublimeText3Snippets
+  ln -s ~/Dropbox/Sublime/Settings/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/Default\ \(Linux\).sublime-keymap
+  ln -s ~/Dropbox/Sublime/Settings/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+
+
 
   rm -f ~/.bash_aliases
   rm -f ~/.bashrc
