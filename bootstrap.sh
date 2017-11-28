@@ -62,6 +62,7 @@ if [ ! -d ~/Projects/Public/DotFiles ]; then
   git clone https://github.com/jisaacks/GitGutter.git ~/.config/sublime-text-3/Packages/GitGutter
   git clone https://github.com/dzhibas/SublimePrettyJson.git ~/.config/sublime-text-3/Packages/PrettyJSON
   git clone https://github.com/wilon/Theme-MonokaiPlus ~/.config/sublime-text-3/Packages/Theme-Monokai+
+  git clone https://github.com/revolunet/sublimetext-markdown-preview ~/.config/sublime-text-3/Packages/MarkDown\ Preview
 
   ln -s ~/Projects/Public/SublimeText3Snippets ~/.config/sublime-text-3/Packages/SublimeText3Snippets
 
