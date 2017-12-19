@@ -6,7 +6,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
-sudo add-apt-repository ppa:yandex-load/main
 
 # Install all software
 sudo apt update
@@ -15,7 +14,7 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev pyth
   mc git git-core tig xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
   virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev libinput-tools xdotool \
-  cvs clipit gitk yandex-load-tank-base
+  cvs clipit gitk
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
@@ -31,6 +30,7 @@ sudo apt install -f
 sudo pip install --upgrade pip
 sudo easy_install -U setuptools
 sudo pip install paramiko PyYAML jinja2 httplib2 imgurpython python-zenity awscli google.cloud
+sudo -H pip install https://api.github.com/repos/yandex/yandex-tank/tarball/master
 
 if [ ! -f ~/.ansible ]; then
   # Install ansible
