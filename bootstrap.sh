@@ -6,6 +6,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gencfsm
+sudo add-apt-repository ppa:yandex-load/main
 
 # Install all software
 sudo apt update
@@ -14,7 +15,7 @@ sudo apt install -y build-essential libcurl4-openssl-dev libmysqlclient-dev pyth
   mc git git-core tig xbindkeys xsel diffuse curl xclip grc htop sublime-text oracle-java8-installer \
   encfs openssh-server keepassx screen gnome-encfs-manager python-pip sshpass clementine libyaml-dev python-dev apg \
   virtualenv virtualenvwrapper terminator acpi zenity texlive-full libyajl-dev libinput-tools xdotool \
-  cvs clipit gitk
+  cvs clipit gitk phantom phantom-ssl
 
 # Install docker
 curl -sSL https://get.docker.com/ | sh
@@ -71,6 +72,7 @@ if [ ! -d ~/Projects/Public/DotFiles ]; then
   ln -s ~/Dropbox/Sublime/Settings/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 
   rm -f ~/.bash_aliases
+  rm -f ~/.bash_functions
   rm -f ~/.bashrc
   rm -f ~/.gemrc
   rm -f ~/.gitconfig
@@ -79,6 +81,7 @@ if [ ! -d ~/Projects/Public/DotFiles ]; then
   rm -f ~/.xbindkeysrc
   sudo rm -f /etc/grc.conf
   ln -s ~/Projects/Public/DotFiles/.bash_aliases ~/.bash_aliases
+  ln -s ~/Projects/Public/DotFiles/.bash_functions ~/.bash_functions
   ln -s ~/Projects/Public/DotFiles/.bash_completion ~/.bash_completion
   ln -s ~/Projects/Public/DotFiles/.bashrc ~/.bashrc
   ln -s ~/Projects/Public/DotFiles/.gemrc ~/.gemrc
